@@ -1,0 +1,143 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    
+}
+h1{
+    position: absolute;
+     color:rgb(255, 255, 255);
+     font-size: 4rem;
+     top: 20%;
+     left: 50%;
+     transform: translateX(-50%);
+     white-space: nowrap;
+     
+ }
+.button{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    height: 2rem;
+    padding: 1.3rem;
+    width: 15rem;
+    text-align: center;
+    color: white;
+    border: white solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+    
+
+
+}
+
+.left .button:hover{
+    background:rgba(223, 39, 39, 0.4);
+    border-color:  rgba(161, 11, 11, 0.3);
+}
+
+.right .button:hover{
+    background: rgba(56, 56, 56, 0.5);
+    border-color: rgba(92, 92, 92, 0.3);
+}
+
+
+
+
+ .split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+ 
+    
+ }
+
+ .split.left, .split.right, .split.right::before, .split.left::before,h1{
+    /*--speed: 8s;*/
+    transition:all 1s ease-in-out;
+    
+}
+ .left{
+     
+     background: url(./images/designer.jpg) center center/cover no-repeat; 
+     left: 0;
+   
+
+ }
+
+.split::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+ 
+}
+
+.left::before{
+    background-color: rgba(223, 39, 39, 0.7);
+}
+
+.right::before{
+    background-color: rgba(43, 43 ,43, 0.8);
+}
+
+
+
+ .right{
+    
+     background:url(./images/programmer.png) center center/cover no-repeat; 
+     right: 0;
+    
+ }
+
+.hover-left .left {
+    width: 75%;
+    
+}
+
+
+.hover-left .right{
+    width: 25%;
+}
+
+.hover-right .right{
+    width: 75%;
+    
+    
+}
+
+.hover-right .left{
+    width: 25%;
+}
+
+.hover-right .left:before{
+   z-index: 2;
+}
+
+.hover-left .right::before{
+    z-index: 2;
+}
+
+
+
+@media(max-width: 800px){
+ 
+    h1{
+        font-size: 2rem;
+    }
+    .button{
+        width: 12rem;
+    }
+
+}
+
+@media(max-height: 700px){
+    .button{
+        top: 70%;
+    }
+}
